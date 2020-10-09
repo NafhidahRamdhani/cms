@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-    <a class="navbar-brand text-warning" href="#">NAFHI's SMALL BUSINESS</a>
+    <a class="navbar-brand text-warning" href="#">KUIS NAFHI</a>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +11,7 @@
           <a class="nav-link btn btn-warning text-dark" href="#">HOME <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-warning text-dark" href="#">CONTACT ME</a>
+        <p><a class="btn btn-warning  text-dark" href="{{('https://instagram.com/nafhidahrq_')}}" role="button">CONTACT ME</a></p>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-warning text-dark" href="#" tabindex="-1" aria-disabled="true">HELP</a>
@@ -45,7 +46,7 @@
       <!--end jumbotron-->
     <!-- Categories -->
     <div class="container-fluid">
-      <h1 class="display-5 text-center mb-5">Categories</h1>
+      <h1 class="display-5 text-center mb-5 text-warning">CATEGORIES</h1>
       <div class="card-deck mb-5">
         <div class="card">
           <img class="card-img-top img-thumbnail" src="{{ asset ('nafhi.id.png')}}" alt="Card image cap">
@@ -89,13 +90,13 @@
         <div class="col-md-4">
           <h2>NAFHI.ID</h2>
           <p>@nafhi.id | Flashback 3 tahun lalu tepatnya 2016, saya mendirikan sebuah olshop kecil kecilan. Bermula posting di snap whatsapp sampe membuat grub olshop di WA. Namun pada tahun 2018 tepatnya saya udah memasuki bangku kelas 3 SMK, saya disibukkan dengan ujian demi ujian yang mana ortu menyuruh untuk break sebentar berjualan. TO BE CONTINUED</p> 
-          <p><a class="btn btn-warning" href="#" role="button">View Story &raquo;</a></p>
+          <p><a class="btn btn-warning" href="{{ 'https://www.instagram.com/tv/B-3wCpyHCkw/?igshid=17ee4opqqiwys' }}" role="button">View Story &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>ALLCUSTOMID_</h2>
           <p>@allcustomid_ | Mulanya business ini dibangun bersama teman saya di malang. Dhea namanya. Kita punya cita cita dan tujuan yang sama, menjadi seorang entreprenuer. Sangat disayangkan pandemi membuat kita harus bersabar untuk menyiapkan sesuatu untung membangun bisnis ini. Bismillah kedepan ada jalan. aamiin
                </p>
-          <p><a class="btn btn-warning" href="#" role="button">View Story &raquo;</a></p>
+          <p><a class="btn btn-warning" href=https://www.instagram.com/p/CCA8IU5B7Zl/?igshid=3mb74yvzshzl role="button">View Story &raquo;</a></p>
         </div>
         <div class="col-md-4">
           <h2>SEKRESEK_</h2>
@@ -120,7 +121,7 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle tayo" src="{{ asset ('tayo.jpg')}}" alt="">
+            <img class="mx-auto rounded-circle tayo" src="{{ asset ('tayo.jpg')}}" alt="width="20% height="20%" style="display: block; margin: auto;">
             <h4>NAFHIDAH RAMDHANI QURRAHMAN</h4>
             <p class="text-muted">Mahasiswa Politeknik Negeri Malang</p>
             <ul class="list-inline social-buttons">

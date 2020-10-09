@@ -10,3 +10,20 @@
     margin-right: auto;
     width: 40%;
   }
+.navbar {
+    border-style:inset;
+    border-bottom: 3px solid rgb(238, 189, 30);
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.footer {
+    border-style:inset;
+    border-bottom: 3px solid rgb(238, 189, 30);
+    font-style: italic;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  font-size: 22px
+}
