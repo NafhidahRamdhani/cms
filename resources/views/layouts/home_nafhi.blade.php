@@ -29,7 +29,7 @@
     <div class="row">
 
       <!-- Blog Entries Column -->
-      @yield('content')
+      @include('Home1')
 
       <!-- Sidebar Widgets Column -->
       @include('layouts.home_sidebar')
