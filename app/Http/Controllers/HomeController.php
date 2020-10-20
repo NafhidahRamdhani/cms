@@ -1,20 +1,32 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Article;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Cache;
 class HomeController extends Controller
 {
-    public function __invoke()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        Cache::remember('article', 15,function(){
-            return Article::all();
-        });
-        $article = Cache::get('article');
-        $article = json_decode(json_encode($article));
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('Home');
+    }
+    public function homeView()
+    {
+        $article = Article::all();
         return view('Home')->with(compact('article'));
     }
 }

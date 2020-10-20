@@ -48,11 +48,10 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgb(4, 17, 75);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 article,
-
 aside,
 figcaption,
 figure,
@@ -2018,8 +2017,8 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #032649;
-  border-color: #054e96;
+  background-color: #343a40;
+  border-color: #454d55;
 }
 
 .table .thead-light th {
@@ -6531,7 +6530,7 @@ a.close.disabled {
   position: absolute;
   display: block;
   content: "";
-  border-color: var(--orange);
+  border-color: transparent;
   border-style: solid;
 }
 
