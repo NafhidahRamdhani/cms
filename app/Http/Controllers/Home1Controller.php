@@ -14,6 +14,10 @@ class Home1Controller extends Controller
 
     });
         $article = Cache::get('article');
+<<<<<<< HEAD
         return view('Home')->with(compact('article'));
+=======
+        return view('layouts.home_nafhi')->with(compact('article'));
+>>>>>>> 453dc0db573ae5d26de8614db273f7f8199567d6
     }
 }
