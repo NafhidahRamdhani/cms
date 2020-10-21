@@ -24,3 +24,6 @@
             </div>
             <button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button>
     </form>
+</div>
+</div>
+@endsection
