@@ -22,6 +22,14 @@
                 <label for="image">Feature Image</label>
                 <input type="text" class="form-control"required="required" name="image" value="{{$article->featured_image}}"></br>
             </div>
+            <div class="form-group">
+                <label for="image">Result</label>
+                <input type="text" class="form-control"required="required" name="result" value="{{$article->result}}"></br>
+            </div>
+            <div class="form-group">
+                <label for="image">Order</label>
+                <input type="text" class="form-control"required="required" name="order" value="{{$article->order}}"></br>
+            </div>
             <button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button>
     </form>
 </div>
