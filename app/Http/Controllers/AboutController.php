@@ -9,4 +9,8 @@ class AboutController extends Controller
     public function __invoke(){
         return view('about');
     }
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
 }
