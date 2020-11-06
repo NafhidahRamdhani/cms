@@ -1,44 +1,36 @@
 @extends('layouts.main')
 
+@section('title', 'Manage')
+
 @section('content')
-<div class = "col-lg-8">
-    <div class = "card-header text-center text-warning">
-        <h2>DAFTAR ARTIKEL</h2>
-    </div>
-    <a href="article/add" class="btn btn-warning">Tambah Data</a>
-    </br>
-    </br>
-    <div clas = "card body">
-        <table class="table table-bordered table-striped text-warning">
-            <thead>
-            <tr>
-                <th>No</th>
-                <th>Judul</th>
-                <th>Tanggal</th>
-                <th>Keterangan</th>
-                <th>Result</th>
-                <th>Order</th>
-            </tr>
-            </thead>
+
+<div class="container" style="padding-top: 90px">
+    <div class="textCake" style="padding-top: 10px">
+        <p>TABEL</p>
+      </div>
+    <table class="table table-bordered table-striped" style="text-align: center" >
+        <thead>
+        <tr>
+        <th>No</th>
+        <th>Judul</th>
+        <th>Tanggal</th>
+        <th><i class="fas fa-sliders-h"></i></th>
+        </tr>
+        </thead>
         <tbody>
- @foreach($article as $a)
-            <tr>
-                <td>{{$a->id}}</td>
-                <td>{{$a->title}}</td>
-                <td>{{$a->created_at}}</td>
-                <td>
-                    <a href="article/edit/{{ $a->id }}" class="badge badge-warning">Edit</a>
-                    <a href="article/delete/{{ $a->id }}" class="badge badge-danger">Hapus</a>
-                    </td>
-                <td>{{$a->result}}</td>
-                <td>{{$a->order}}</td>
-            </tr>
- @endforeach
+        @foreach($article as $a)
+        <tr>
+        <td>{{$a->id}}</td>
+        <td>{{$a->title}}</td>
+        <td>{{$a->created_at}}</td>
+        <td><a href="manage/edit/{{ $a->id }}" class="badge badge-warning">Edit</a>
+            <a href="manage/delete/{{ $a->id }}" class="badge badge-danger">Hapus</a>
+        </td>
+
+        </tr>
+        @endforeach
         </tbody>
-</table>
+    </table>
+    <a href="manage/add" class="btn btn-dark float-right">Tambah Data</a>
 </div>
-</div>
-</div>
-@endsection
-        
-    
+@endsection 
