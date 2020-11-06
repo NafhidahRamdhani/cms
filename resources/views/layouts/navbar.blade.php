@@ -14,13 +14,13 @@
         <p><a class="btn btn-warning  text-dark" href="{{('https://instagram.com/nafhidahrq_')}}" role="button">CONTACT ME</a></p>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-warning text-dark" href="#" tabindex="-1" aria-disabled="true">HELP</a>
+          <a class="nav-link btn btn-warning text-dark" href="#" tabindex="-1" aria-disabled="true">KELOLA</a>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-warning text-dark" href="#" tabindex="-1" data-toggle="modal" data-target="#kampret">MENU</a>
         </li>
         <li class="nav-item mr-2">
-          <a class="nav-link btn btn-warning text-dark" href="#" tabindex="-1" data-toggle="modal" data-target="#free">ORDER</a>
+          <a class="nav-link btn btn-warning text-dark" href="#" tabindex="-1" data-toggle="modal" data-target="#free">ABOUT</a>
         </li>
       </ul>
     </div>
