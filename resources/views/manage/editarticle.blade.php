@@ -7,21 +7,23 @@
     </div>
     </br>
     </br>
-    <form action="/article/update/{{$article->id}}" method="post">
-            {{csrf_field()}}
+    <form action="/article/update/{{$article->id}}" method="post"
+enctype="multipart/form-data">
+            @csrf
             <input type="hidden" name="id" value="{{$article->id}}"></br>
             <div class="form-group">
                 <label for="title">Judul</label>
-                <input type="text" class="form-control"required="required" name="title" value="{{$article->title}}"></br>
+                <input type="text" class="form-control" required="required" name="title" value="{{$article->title}}"></br>
             </div>
             <div class="form-group">
                 <label for="content">Content</label>
-                <input type="text" class="form-control"required="required" name="content" value="{{$article->content}}"></br>
+                <input type="text" class="form-control" required="required" name="content" value="{{$article->content}}"></br>
             </div>
             <div class="form-group">
                 <label for="image">Feature Image</label>
-                <input type="text" class="form-control"required="required" name="image" value="{{$article->featured_image}}"></br>
-            </div>
+                <input type="file" class="form-control" required="required" name="image" value="{{$article->featured_image}}"></br>
+            <img width="150px" src="{{asset('storage/'.$article->featured_image)}}">
+
             <div class="form-group">
                 <label for="image">Result</label>
                 <input type="text" class="form-control"required="required" name="result" value="{{$article->result}}"></br>
@@ -30,7 +32,7 @@
                 <label for="image">Order</label>
                 <input type="text" class="form-control"required="required" name="order" value="{{$article->order}}"></br>
             </div>
-            <button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button>
+            <button type="submit" name="edit" class="btn btn-warning float-right">Ubah Data</button>
     </form>
 </div>
 </div>

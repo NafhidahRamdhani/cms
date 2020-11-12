@@ -16,7 +16,7 @@ Route::get('/article/edit/{id}','ArticleController@edit');
 Route::post('/article/update/{id}','ArticleController@update');
 Route::get('/article/delete/{id}','ArticleController@delete');
 
-Route::get('/about', 'AboutController@index');
+// Route::get('/about', 'AboutController@index');
 
 Route::get('/article/{id}', 'ArticleController@index');
 
@@ -37,6 +37,8 @@ Route::get('/manageUser/delete/{id}','ManageUserController@delete');
 
 Auth::routes();
 Route::get('/home', 'home1Controller@index')->name('home');
+
+Route::get('/manage/cetak_pdf', 'ArticleController@cetak_pdf');
 
 
 

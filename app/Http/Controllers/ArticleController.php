@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Article;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Gate;
+use PDF;
 
 class ArticleController extends Controller
 {
@@ -29,15 +30,18 @@ class ArticleController extends Controller
     public function add(){
         return view('addarticle');
     }
+    
     public function create(Request $request){
+        if($request->file('image')){
+            $image_name = $request->file('image')->store('images','public');  
+        }
         Article::create([
             'title' => $request->title,
             'content' => $request->content,
-            'featured_image' => $request->image,
+            'featured_image' => $image_name,
             'result' => $request->result,
             'order' => $request->order
         ]);
-        // echo "<pre>"; print_r($article); die;
         return redirect('/manage');
     }
     public function edit($id){
@@ -48,17 +52,29 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->title = $request->title;
         $article->content = $request->content;
-        $article->featured_image = $request->image;
-        $article->result = $request->result;
-        $article->order = $request->order;
+
+        if($article->featured_image && 
+        file_exists(storage_path('app/public/' . $article->featured_image))){
+        \Storage::delete('public/'.$article->featured_image);
+    }
+        $image_name = $request->file('image')->store('images', 'public');
+        $article->featured_image = $image_name;
         $article->save();
-        // echo "<pre>"; print_r($article); die;
         return redirect('/manage');
- }
+    }
+
         public function delete($id){
         $article = Article::find($id);
         $article->delete();
         return redirect('/manage');
  }
+
+        public function cetak_pdf(){
+        $article = Article::all();
+        $pdf = PDF::loadview('Upload-Report.articles_pdf',['article'=>$article]);
+        return $pdf->stream();
+        
+   }
+   
 
 }
