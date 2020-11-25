@@ -27,7 +27,9 @@
         <td>{{$u->email}}</td>
         <td>{{$u->password}}</td>
         <td>{{$u->roles}}</td>
-        <td><a href="manageUser/editUser/{{ $u->id }}" class="badge badge-warning ">Edit</a>
+        <td>{{$u->image}}</td>
+        <td><img src="{{asset('/storage/'.$u->image) }}" alt="imageCap"></td>
+        <td><a href="manageUser/editUser/{{ $u->id }}" class="badge badge-warning">Edit</a>
             <a href="manageUser/delete/{{ $u->id }}" class="badge badge-danger">Hapus</a>
         </td>
 
@@ -36,5 +38,6 @@
         </tbody>
     </table>
     <a href="manageUser/addUser" class="btn btn-warning float-right">Tambah Data</a>
+    <a href="coba/coba_pdf" class="btn btn-warning float-right">Cetak Data</a>
 </div>
 @endsection 

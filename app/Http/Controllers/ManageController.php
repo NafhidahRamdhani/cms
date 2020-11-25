@@ -32,6 +32,7 @@ class ManageController extends Controller
         'title' => $request->title,
         'content' => $request->content,
         'featured_image' => $request->image
+        
     ]);
         return redirect('/manage');
     }

@@ -10,7 +10,7 @@
     </div>
     </br>
     </br>
-    <form action="/manageUser/update/{{$user->id}}" method="post">
+    <form action="/manageUser/update/{{$user->id}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <input type="hidden" name="id" value="{{$user->id}}"><br>
         <div class="form-group text-warning">
@@ -28,6 +28,10 @@
         <div class="form-group text-warning">
             <label for="roles">Roles</label>
             <input type="text" class="form-control" required="required" name="roles" value="{{$user->roles}}"></br>
+        </div>
+        <div class="form-group text-warning">
+            <label for="roles">Image</label>
+            <input type="file" class="form-control" required="required" name="image" value="{{$user->image}}"></br>
         </div>
         <button type="submit" name="edit" class="btn btn-warning float-right">Ubah Data</button>
     </form>
