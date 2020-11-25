@@ -11,12 +11,12 @@
     }
         </style>
         <center>
-            <h3>LAPORAN ARTICLE</h3>
+            <h2>LAPORAN ARTICLE</h3>
             
         </center>
-        <table class='table table-bordered'>
+        <table class='table table-bordered' border="1px solid black">
             <thead>
-                <tr>
+                <tr bgcolor='FFD700' align='center'>
                     <th>No</th>
                     <th>Nama</th>
                     <th>Email</th>
@@ -27,7 +27,7 @@
             <tbody>
                 @php $i=1 @endphp
                 @foreach($user as $a)
-                <tr>
+                <tr bgcolor='#EE6868' align='center'>
                     <td>{{ $i++ }}</td>
                     <td>{{$a->name}}</td>
                     <td>{{$a->email}}</td>

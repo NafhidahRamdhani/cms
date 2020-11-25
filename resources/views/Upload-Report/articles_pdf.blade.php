@@ -11,11 +11,11 @@
     }
         </style>
         <center>
-            <h5>Laporan Artikel</h4>
+            <h2>LAPORAN ARTICLE</h4>
         </center>
-        <table class='table table-bordered'>
+        <table class='table table-bordered' border="1px solid black">
             <thead>
-                <tr>
+                <tr bgcolor='FFD700' align='center'>
                     <th>No</th>
                     <th>Judul</th>
                     <th>Isi</th>
@@ -25,11 +25,11 @@
             <tbody>
                 @php $i=1 @endphp
                 @foreach($article as $a)
-                <tr>
+                <tr bgcolor='D3D3D3' align='center'>
                     <td>{{ $i++ }}</td>
                     <td>{{$a->title}}</td>
                     <td>{{$a->content}}</td>
-                    <td>{{$a->featured_image}}</td>
+                    <td><img src="{{ './storage/'.$a->featured_image}}" alt=""></td>
                 </tr>
                 @endforeach
             </tbody>

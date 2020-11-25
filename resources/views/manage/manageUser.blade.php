@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div class="container" style="padding-top: 100px">
-    <div class="textCake text-warning" style="padding-top: 30px">
+<div class="container" style="padding-top: 20px">
+    <div class="textCake text-warning" style="padding-top: 70px">
         <p>TABEL</p>
       </div>
-    <table class="table table-bordered table-striped text-warning" style="text-align: center" >
+    <table class="table table-bordered table-striped text-black" style="text-align: center" bgcolor='DAA520'>
         <thead>
         <tr>
         <th>No</th>
@@ -38,6 +38,7 @@
         </tbody>
     </table>
     <a href="manageUser/addUser" class="btn btn-warning float-right">Tambah Data</a>
-    <a href="coba/coba_pdf" class="btn btn-warning float-right">Cetak Data</a>
+    <a href="/manageUser/coba_pdf" class="btn btn-warning" target="_blank">CETAK PDF</a>
 </div>
 @endsection 
+

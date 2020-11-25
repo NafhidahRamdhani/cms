@@ -39,7 +39,7 @@ Auth::routes();
 Route::get('/home', 'home1Controller@index')->name('home');
 
 Route::get('/manage/cetak_pdf', 'ArticleController@cetak_pdf');
-Route::get('/coba/coba_pdf', 'ManageUserController@coba_pdf');
+Route::get('/manageUser/coba_pdf', 'ManageUserController@coba_pdf');
 
 
 

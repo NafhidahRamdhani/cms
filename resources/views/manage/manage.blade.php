@@ -5,15 +5,15 @@
 @section('content')
 
 <div class="container" style="padding-top: 90px">
-    <div class="textCake text-warning" style="padding-top: 10px">
+    <div class="textCake text-warning" style="padding-top: 70px">
         <p>TABEL</p>
       </div>
-    <table class="table table-bordered table-striped text-warning" style="text-align: center" >
+    <table class="table table-bordered table-striped text-black" style="text-align: center" bgcolor='DAA520'>
         <thead>
         <tr>
         <th>No</th>
-        <th>Judul</th>
-        <th>Tanggal</th>
+        <th>JUDUL</th>
+        <th>TANGGAL</th>
         <th><i class="fas fa-sliders-h"></i></th>
         </tr>
         </thead>
