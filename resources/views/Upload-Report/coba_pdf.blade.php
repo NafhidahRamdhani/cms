@@ -7,18 +7,20 @@
         <style type="text/css">
         table tr td,
         table tr th{
-            font-size: 9pt;
+            font-size: 10pt;
     }
         </style>
         <center>
-            <h5>Laporan Artikel</h4>
+            <h3>LAPORAN ARTICLE</h3>
+            
         </center>
         <table class='table table-bordered'>
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Judul</th>
-                    <th>Isi</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Roles</th>
                     <th>Gambar</th>
                 </tr>
             </thead>
@@ -30,7 +32,7 @@
                     <td>{{$a->name}}</td>
                     <td>{{$a->email}}</td>
                     <td>{{$a->roles}}</td>
-                    <td><img src="{{ $a->image}}" alt=""></td>
+                    <td><img src="{{ './storage/'.$a->image}}" alt=""></td>
                 </tr>
                 @endforeach
             </tbody>

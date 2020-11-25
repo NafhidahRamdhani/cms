@@ -7,7 +7,7 @@ use App\Article;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Gate;
 use PDF;
-
+use Storage;
 class ArticleController extends Controller
 {
 
